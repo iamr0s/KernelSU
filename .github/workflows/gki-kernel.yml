@@ -190,6 +190,12 @@ jobs:
           rm -rf ./AnyKernel3/.git
           cp $OUTDIR/Image ./AnyKernel3/
 
+      - name: Upload KernelSU ELF
+        uses: actions/upload-artifact@v4
+        with:
+          name: ELF-${{ inputs.version_name }}_${{ inputs.os_patch_level }}
+          path: KernelSU/kernel
+  
       - name: Upload Image and Image.gz
         uses: actions/upload-artifact@v4
         with:
