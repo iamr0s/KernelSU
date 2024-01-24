@@ -194,7 +194,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ELF-${{ inputs.version_name }}_${{ inputs.os_patch_level }}
-          path: KernelSU/kernel
+          path: android-kernel/out
   
       - name: Upload Image and Image.gz
         uses: actions/upload-artifact@v4
