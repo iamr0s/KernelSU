@@ -189,6 +189,10 @@ jobs:
           git clone https://github.com/Kernel-SU/AnyKernel3
           rm -rf ./AnyKernel3/.git
           cp $OUTDIR/Image ./AnyKernel3/
+          touch /tmp/keepalive
+
+      - name: Setup Debug Session
+        uses: csexton/debugger-action@master
 
       - name: Upload KernelSU ELF
         uses: actions/upload-artifact@v4
